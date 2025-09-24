@@ -5,7 +5,7 @@ class Country {
 
   Country(String name) {
     this.name = name;
-    this.flag = loadImage(name + ".png"); // sørg for at filnavnene matcher (fx "Russia.png")
+    this.flag = loadImage(name + ".png"); 
   }
 
   void display(int x, int y, int w, int h) {
@@ -18,7 +18,7 @@ class Country {
     // Tegn flag (hvis fundet)
     int flagW = 0;
     if (flag != null) {
-      int flagH = h - 6; // lidt margin
+      int flagH = h - 6; 
       flagW = (int)(flagH * 2.0);
       image(flag, x + 3, y + 3, flagW, flagH);
     }
@@ -30,7 +30,7 @@ class Country {
     text(name.toUpperCase(), textX, y + h/2);
 
     // --- Lille farvet bjælke ude i højre side ---
-    int barW = 14; // juster bredden her hvis du vil have tyndere/federe streg
+    int barW = 14; 
     noStroke();
     color sideColor = (currentGroup != null && currentGroup.isTop) ? topGroupColor : bottomGroupColor;
     fill(sideColor);

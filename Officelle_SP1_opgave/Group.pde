@@ -9,7 +9,7 @@ class Group {
     countries = new Country[names.length];
     for (int i = 0; i < names.length; i++) {
       countries[i] = new Country(names[i]);
-      countries[i].currentGroup = this;  // <-- sæt gruppereference så Country kan vælge farve
+      countries[i].currentGroup = this;  
     }
   }
 
